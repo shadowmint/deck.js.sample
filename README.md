@@ -3,13 +3,17 @@ Simple starter for deck.js (https://github.com/imakewebthings/deck.js/)
 Examples
 --
 
-https://raw.github.com/shadowmint/deck.js.sample/master/sample.html
+Basic usage:
+http://htmlpreview.github.com/?https://raw.github.com/shadowmint/deck.js.sample/master/sample.html
 
-https://raw.github.com/shadowmint/deck.js.sample/master/sample-nav.html
+Basic usage with nav bar:
+http://htmlpreview.github.com/?https://raw.github.com/shadowmint/deck.js.sample/master/sample-nav.html
 
-https://raw.github.com/shadowmint/deck.js.sample/master/sample-theme.html
+Basic usage with different theme:
+http://htmlpreview.github.com/?https://raw.github.com/shadowmint/deck.js.sample/master/sample-theme.html
 
-https://raw.github.com/shadowmint/deck.js.sample/master/sample-preso.html
+Basic usage as a presentation:
+http://htmlpreview.github.com/?https://raw.github.com/shadowmint/deck.js.sample/master/sample-preso.html
 
 Notes
 -- 
