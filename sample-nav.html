@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="deck.js/themes/style/swiss.css"/>
+    <link rel="stylesheet" href="deck.js/themes/transition/horizontal-slide.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen"/>
+  </head>
+  <body class="deck-container">
+
+    <section class="slide">
+      <h2>Slide 1</h2>
+      <p>
+        Content goes here
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Slide 2</h2>
+      <p>
+        Content goes here
+      </p>
+    </section>
+
+    <!-- Bottom nav; control via the 'onclick' events and class names -->
+    <style>
+      .footer {
+        position: absolute; 
+        bottom: 0px; 
+        z-index: 10;
+        width: 100%;
+        vertical-align: center;
+        margin-bottom: 30px;
+      }
+      .footer div {
+        display: inline-block;
+        width: 32%;
+        text-align: center;
+      }
+    </style>
+    <div class="footer">
+      <div>
+        <a href="#" onclick="$.deck('prev'); return false;" class="btn" />Prev</a>
+      </div>
+      <div class="deck-status">
+            <span class="deck-status-current"></span> /
+            <span class="deck-status-total">15</span>
+      </div>
+      <div>
+        <a href="#" onclick="$.deck('next'); return false;" class="btn" />Next</a>
+      </div>
+    </div>
+
+    <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="deck.js/jquery-1.7.2.min.js"></script>
+    <script src="deck.js/modernizr.custom.js"></script>
+
+    <!-- Deck Core and extensions -->
+    <script src="deck.js/core/deck.core.js"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js"></script>
+    <script src="deck.js/extensions/status/deck.status.js"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+
+    <!-- Staaaaart! -->
+    <script> $(function() { $.deck('.slide'); }); </script>
+  </body>
+</html>

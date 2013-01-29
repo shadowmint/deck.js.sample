@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="deck.js/themes/style/swiss.css"/>
+    <link rel="stylesheet" href="deck.js/themes/transition/horizontal-slide.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen"/>
+
+    <!-- Some custom style tweeks -->
+    <style>
+      .slide {
+        margin-top: 20px;
+        line-height: 30px;
+        width: 80% !important;
+      }
+      .slide p {
+        margin-top: 15px;
+      }
+      .slide .tiny {
+        font-size: 0.5em;
+      }
+    </style>
+  </head>
+  <body class="deck-container">
+
+    <section class="slide">
+      <h2>Hi there! Welcome to DECK.JS</h2>
+      <p>
+        Well hi! Welcome to Deck.Js
+      </p>
+      <p>
+        You can use the nav buttons at the bottom to nav between slides,<br/>
+        or the <b>right and left</b> keys on the keyboard.
+      </p>
+      <p>
+        See you on slide two~
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Content</h2>
+      <p>
+        It's easy to put content into your slides; just use html.
+      </p>
+      <p>
+        <img src="http://placekitten.com/400/100" alt="Placecat">
+        <img src="http://placekitten.com/400/100" alt="Placecat">
+      </p>
+      <p>
+        <br/>
+        There are also a few special classes and types like <b>blockquote</b> which you
+        can use for quotes:
+      </p>
+      <p>
+        <blockquote cite="http://www.google.com">
+          <p>All good is good. Or whatever</p>
+          <p><cite>Somebody</cite></b>
+        </blockquote>
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Content</h2>
+      <p>
+        Of course, code goes in <b>pre</b> blocks, as you'd expect.
+      </p>
+      <pre style="font-size: 0.4em; line-height: 1.0em;">
+FollowThru2::Application.routes.draw do
+
+  root :to =&gt; "home#index"
+
+  authenticated :user do
+    root :to =&gt; 'home#index'
+
+    # Resources
+    resources :v_projects,     :path =&gt; "edit/projects",     :as =&gt; :v_projects
+    resources :v_payments,     :path =&gt; "edit/payments",     :as =&gt; :v_payments
+    resources :v_pledge_types, :path =&gt; "edit/pledge_types", :as =&gt; :v_pledge_types
+    resources :v_pledges,      :path =&gt; "edit/pledges",      :as =&gt; :v_pledges
+    resources :v_goals,        :path =&gt; "edit/goals",        :as =&gt; :v_goals
+    resources :v_assets,       :path =&gt; "edit/assets",       :as =&gt; :v_assets
+
+    match 'edit' =&gt; 'home#edit', :as =&gt; :edit
+  end
+
+  devise_for :users
+  resources :users, :only =&gt; [:show, :index]
+end        
+      </pre>
+      <p>
+        ...and you can easily drop a syntax highlighting plugin in to help format code too~
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Subsections</h2>
+      <p>
+        You can also use subsections by using <b>li</b> elements marked as 'slide'.<br/>
+        <span class="tiny">Hint: Hit next...</span>
+      </p>
+      <ul>
+        <li class="slide"> Point 1... </li>
+        <li class="slide"> Point 2... </li>
+        <li class="slide"> Point 3... </li>
+        <li class="slide"> Point 4... </li>
+        <li class="slide"> Point 5... </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Done!</h2>
+      <p>
+        More info here: <a href="http://imakewebthings.com/deck.js/">http://imakewebthings.com/deck.js/</a>
+      </p>
+      <p>
+        <img src="http://placekitten.com/600/400" alt="Placecat">
+      </p>
+    </section>
+
+    <!-- Bottom nav; control via the 'onclick' events and class names -->
+    <style>
+      .footer {
+        position: absolute; 
+        bottom: 0px; 
+        z-index: 10;
+        width: 100%;
+        vertical-align: center;
+        margin-bottom: 30px;
+      }
+      .footer div {
+        display: inline-block;
+        width: 32%;
+        text-align: center;
+      }
+    </style>
+    <div class="footer">
+      <div>
+        <a href="#" onclick="$.deck('prev'); return false;" class="btn" />Prev</a>
+      </div>
+      <div class="deck-status">
+            <span class="deck-status-current"></span> /
+            <span class="deck-status-total">15</span>
+      </div>
+      <div>
+        <a href="#" onclick="$.deck('next'); return false;" class="btn" />Next</a>
+      </div>
+    </div>
+
+    <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="deck.js/jquery-1.7.2.min.js"></script>
+    <script src="deck.js/modernizr.custom.js"></script>
+
+    <!-- Deck Core and extensions -->
+    <script src="deck.js/core/deck.core.js"></script>
+    <script src="deck.js/extensions/hash/deck.hash.js"></script>
+    <script src="deck.js/extensions/menu/deck.menu.js"></script>
+    <script src="deck.js/extensions/goto/deck.goto.js"></script>
+    <script src="deck.js/extensions/status/deck.status.js"></script>
+    <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+
+    <!-- Staaaaart! -->
+    <script> $(function() { $.deck('.slide'); }); </script>
+  </body>
+</html>
